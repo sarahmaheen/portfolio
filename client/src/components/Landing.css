@@ -1,0 +1,138 @@
+.main-container {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 100%;
+}
+
+.section.content-grid {
+    flex: 1.5;
+    overflow: hidden; /* Hide overflow for the entire section */
+}
+
+.image-grid {
+    flex: 1;
+    display: flex; /* Change to flex for vertical stacking */
+    flex-direction: column; /* Stack items vertically */
+    overflow: hidden; /* Hide scrollbar */
+    position: relative; /* Ensure proper positioning */
+    height: 100%; /* Full height */
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Add padding for aesthetics */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire grid item */
+    margin: 0; /* Ensure no margin on images */
+    padding: 0; /* Ensure no padding on images */
+    transition: transform 0.3s ease; /* Smooth effect for transformations */
+}
+
+/* Specific spans for images */
+.span-2-columns {
+    grid-column: span 2; /* Span 2 columns */
+}
+
+.spacer {
+    flex: 0.5; /* Adjust spacer size */
+    background-color:#000;
+}
+
+.text-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(29, 163, 19);
+}
+.text-container {
+    /* align-self: flex-start; */
+    /* align-self: flex-end; */
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-self: flex-start; */
+    justify-content: center;
+    background-color: #f7ee00;
+    padding: 4rem;
+    /* border-radius: 10px; */
+    text-align:left; /* Center text */
+}
+.text-container {
+    display: flex; /* Align letters in a line */
+}
+
+
+.text-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+    /* line-height: 1.2; */
+    -webkit-text-stroke: 1.5px #000; /* Text stroke for border effect */
+    color: transparent; /* Keep text color transparent for gradient */
+    position: relative; /* Required for positioning */
+}
+
+.text-container h2 span {
+    display: inline-block; /* Each letter can scale independently */
+    transition: transform 0.3s ease-in-out; /* Transition for scaling */
+}
+
+.text-container h2 span:hover {
+    transform: scale(1.4); /* Scale the letter when hovered (up to 7rem if font-size is 4rem) */
+    color: blue;
+}
+
+
+
+
+
+.text-container p {
+
+
+    font-family: 'Sofia Pro', 'ITC Avant Garde Gothic Pro', system-ui, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #333; /* Darker color for contrast */
+}
+
+
+/* 
+
+.first-text-container{
+    flex: 1;
+    align-self: flex-start;
+    justify-self: flex-start;
+    background-color: #fff;
+}
+
+ */
+
+
+ 
+.second-text-container p{
+    /* align-self: flex-start; */
+    font-family: sofia-pro, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #00010f;
+    text-align: left;
+    /* background-color: #fff; */
+    -webkit-font-smoothing: antialiased;
+}
+
+.second-text-container p span{
+    color: blue;
+    background-color: transparent;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}

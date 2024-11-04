@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+}
+
+.content {
+  flex: 3.5; /* Matches the content flex space in your layout */
+  padding: 20px;
+  width: 80vw; /* Adjusts to the remaining width */
+  overflow: auto; /* Allows scrolling for long content */
+}

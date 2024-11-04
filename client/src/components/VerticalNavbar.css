@@ -1,0 +1,67 @@
+.vertical-navbar {
+  /* position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 100vh;
+  width: 14vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 14vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1000; 
+}
+
+.vertical-navbar .nav-section {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.vertical-navbar .nav-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.vertical-navbar .nav-item {
+  font-size: 1rem;
+  padding: 15px 10px;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s ease; /* Smooth transition for size change */
+}
+
+.vertical-navbar .nav-item.selected {
+  font-size: 1.8rem; /* Larger font size for selected item */
+  color: pink; /* Change color for selected item */
+  font-weight: bold;
+  transform: scale(1.2); /* Scale up the item */
+}
+
+.vertical-navbar .nav-item:not(.selected):hover {
+  color: #333; /* Optional hover color for non-selected items */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.nav-section.secondary {
+  margin-top: auto;
+  padding: 10px;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}

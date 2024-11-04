@@ -1,0 +1,158 @@
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.spacer {
+    flex: 0.5; /* Spacer takes 0.5 parts of the total space */
+    background-color: #000; /* Optional color */
+    height: 100vh; /* Full height of viewport */
+}
+
+.projects-content {
+    background-color: yellow;
+    flex: 3.5; /* Content area */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 5rem;
+}
+
+.projects-header {
+    flex: 1;
+    background-color: transparent;
+    border: 2px solid #000;
+    text-align: center; /* Center header */
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    
+    max-width: 80%;
+}
+.projects-header h2{
+    flex: 3;
+    color:#000;
+    font-size: 2rem;
+}
+
+.projects-header p{
+    flex: 1;
+    color:#000;
+    border: 3px solid blue;
+    margin: 1%;
+    padding: 1%;
+    animation: moveUpDown 1s ease-in-out infinite;
+
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the value for the height of the movement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.projects-grid {
+    /* background-color: #fff; */
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+    justify-content: center; /* Center cards horizontally */
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px; 
+    padding: 0.5rem;
+    width: 300px; /* Fixed width for cards */
+    max-height: auto;
+    transition: transform 0.3s ease; /* Smooth transform for hover */
+    position: relative; /* Allow absolute positioning of inner elements */
+}
+.project-card:hover{
+    border: 2px solid #000;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+}
+
+.project-info h3{
+    font-size: 1.5rem;
+}
+
+.project-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+.project-images img {
+    width: 100%; /* Responsive image */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 10px;  */
+}
+
+.project-links a {
+    color:#000; /* Link color */
+}
+
+
+.project-links a:hover{
+color: blue;
+/* padding: 3%; */
+border-bottom: 2px solid #000;
+}
+
+
+
+/* Initial styles for animations */
+.projects-header {
+  opacity: 0;
+  transform: translateX(200px); /* Initial position off-screen */
+  transition: transform 0.9s ease, opacity 0.5s ease;
+}
+
+.project-card{
+    opacity: 0;
+  transform: translateX(-200px); /* Initial position off-screen */
+  transition: transform 1s ease, opacity 0.5s ease;
+}
+
+/* When elements are in view */
+.projects-header.animate-from-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.project-card.animate-from-left {
+  transform: translateX(-200px);
+  opacity: 1;
+}

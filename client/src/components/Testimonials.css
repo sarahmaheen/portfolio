@@ -1,0 +1,145 @@
+.testimonials-page {
+    display: flex;
+    flex-direction: row;
+    /* align-items: stretch;  */
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    max-height: 50vh;
+}
+
+.spacer {
+    flex: 0.5; /* Spacer takes 0.5 parts of the total space */
+    background-color: #000;
+    height: 100vh; /* Full height of viewport */
+}
+
+.content {
+    
+    flex: 3.5; /* Content takes 3.5 parts of the total space */
+    display: flex;
+    flex-direction: column; /* Changed to column for stacking */
+    justify-content: center;
+    /* align-items: stretch;  */
+    width: 80%;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 50%; */
+}
+
+.content-inner {
+    /* background-color:; */
+   gap: 2rem;
+    display: flex;
+    flex-direction: row; /* Align h2 and slider horizontally */
+    align-items: stretch; /* Ensure equal height for h2 and slider */
+    width: 100%; /* Full width of the content */
+    overflow: hidden;
+}
+
+
+
+.content-inner h2 {
+    flex: 1; 
+    margin: 0; /* Remove bottom margin */
+    padding: 2rem; /* Optional padding */
+    text-align: center; /* Center align the heading text */
+    background-color: blue;
+
+    font-size: 3rem;
+    /* max-height: 100%; */
+}
+
+.slider {
+    border: 2px solid #000;
+    flex: 2; /* Take equal space as h2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Hide overflow for a sliding effect */
+    position: relative;
+}
+
+.slide {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+    width: 100%; /* Ensures full width for the slides container */
+}
+
+.testimonial {
+    min-width: 100%; /* Each testimonial takes the full width */
+    box-sizing: border-box; /* Include padding in the width */
+    padding: 20px; /* Inner padding for testimonials */
+    text-align: center; /* Center text inside testimonials */
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial h4{
+justify-self: flex-start;
+align-self: flex-end;
+font-size: 2rem;
+color: #00000089;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color:#000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+/* Define keyframes for the slide-in effect */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the h2 and slider */
+h2.slide-in {
+    animation: slideInLeft 0.9s ease-in-out  forwards; /* Left to right animation */
+}
+
+.slider.slide-in {
+    animation: slideInRight 0.9s  ease-in-out forwards; /* Right to left animation */
+}
