@@ -1,21 +1,12 @@
-.vertical-navbar {
-  /* position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 100vh;
-  width: 14vw;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
-
+/* .vertical-navbar {
+  
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+ 
+  bottom: 0;
   width: 14vw;
-  background-color: #fff;
+  background-color:#000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -42,20 +33,22 @@
   font-size: 1rem;
   padding: 15px 10px;
   cursor: pointer;
-  color: #000;
-  transition: all 0.3s ease; /* Smooth transition for size change */
+  color: #fff;
+  transition: all 0.3s ease; 
 }
 
 .vertical-navbar .nav-item.selected {
-  font-size: 1.8rem; /* Larger font size for selected item */
-  color: pink; /* Change color for selected item */
+  font-size: 1.8rem; 
+  
   font-weight: bold;
-  transform: scale(1.2); /* Scale up the item */
+  transform: scale(1.2); 
+  -webkit-text-stroke: 0.1rem #fff; 
+  color: transparent; 
 }
 
 .vertical-navbar .nav-item:not(.selected):hover {
-  color: #333; /* Optional hover color for non-selected items */
-  transform: scale(1.05); /* Slightly scale up on hover */
+  color: #333; 
+  transform: scale(1.05); 
 }
 
 .nav-section.secondary {
@@ -64,4 +57,47 @@
   color: #666;
   font-size: 0.9rem;
   text-align: center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vertical-navbar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 200px;
+  background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+  color: #fff;
+  padding: 20px;
+  z-index: 1000; /* High z-index to keep it on top */
+}
+
+.vertical-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  cursor: pointer;
+  margin: 10px 0;
+  color: #ddd;
+  font-weight: bold;
+}
+
+.nav-item.selected {
+  color: #fff;
+  text-decoration: underline;
 }

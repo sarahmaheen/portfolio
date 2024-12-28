@@ -1,0 +1,177 @@
+/* .hero-container {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto; 
+    position: relative;
+  }
+  
+  .hero-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+    cursor: pointer;
+    color: #ddd;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-item.selected {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+ 
+  
+  [data-section] {
+    height: 100vh; 
+    width: 100vw;
+    
+  } */
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+  .hero-container {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .hero-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14vw;
+    height: 100vh;
+    /* background-color: rgba(51, 51, 51, 0.9); */
+    /* background-color: #cd93932b; */
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 0; */
+    z-index: 1000;
+  }
+  
+  .nav-item {
+    flex: 1;
+    margin: 0 15px;
+    cursor: pointer;
+    color: #ddd;
+    /* font-weight: bold; */
+    transition: color 0.3s;
+  }
+  
+  .nav-item.selected {
+    flex: 3; 
+  color: transparent;
+  font-size: 8rem;
+  background-color: transparent;
+  font-weight: bold;
+  writing-mode: vertical-lr; 
+  -webkit-text-stroke: 0.5px #ffffff86; 
+  }
+  
+ 
+  
+  [data-section] {
+    height: 100vh; 
+    width: 100vw;
+    
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  /* .hero-container {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto; 
+   
+    position: relative;
+    background-color: red;
+  }
+  .hero-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15vw;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .nav-item {
+   
+    margin: 0.2rem 0.5rem;
+    cursor: pointer;
+    color: #ddd;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-item.selected {
+    flex: 3; 
+  color: transparent;
+  font-size: 8rem;
+  background-color: transparent;
+  
+  writing-mode: vertical-lr; 
+  -webkit-text-stroke: 0.5px #ffffff86; 
+  }
+  
+ 
+  .nav-item::after {
+    content: "";
+    flex: 1;
+  } */
+  

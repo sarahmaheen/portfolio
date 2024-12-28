@@ -155,12 +155,55 @@
 
 
 
+///////////////////////////////////////////////////////////////////////////////////
+// import React from 'react';
+// import './VerticalNavbar.css';
+
+// const VerticalNavbar = ({ scrollToSection, selectedSection }) => {
+//   console.log(selectedSection,scrollToSection)
+//   const navItems = [
+//     { name: 'Home', section: 'Home' },
+//     { name: 'About', section: 'About' },
+//     { name: 'Services', section: 'Services' },
+//     { name: 'Work', section: 'Work' },
+//     { name: 'Reviews', section: 'Reviews' },
+//     { name: 'Contact', section: 'Contact' },
+//   ];
+
+//   return (
+//     <div className="vertical-navbar">
+//       <div className="nav-section main">
+//         <ul>
+//           {navItems.map((item) => (
+//             <li
+//               key={item.name}
+//               className={`nav-item ${selectedSection === item.section ? 'selected' : ''}`} // Add selected class conditionally
+//               onClick={() => scrollToSection(item.section)} // Call scrollToSection on click
+//               data-section={item.section}
+//             >
+//               {item.name}
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//       <div className="nav-section secondary">
+//         {/* Optional secondary content */}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default VerticalNavbar;
+
+
+
+
+
 
 import React from 'react';
 import './VerticalNavbar.css';
 
 const VerticalNavbar = ({ scrollToSection, selectedSection }) => {
-  console.log(selectedSection,scrollToSection)
   const navItems = [
     { name: 'Home', section: 'Home' },
     { name: 'About', section: 'About' },
@@ -172,23 +215,17 @@ const VerticalNavbar = ({ scrollToSection, selectedSection }) => {
 
   return (
     <div className="vertical-navbar">
-      <div className="nav-section main">
-        <ul>
-          {navItems.map((item) => (
-            <li
-              key={item.name}
-              className={`nav-item ${selectedSection === item.section ? 'selected' : ''}`} // Add selected class conditionally
-              onClick={() => scrollToSection(item.section)} // Call scrollToSection on click
-              data-section={item.section}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="nav-section secondary">
-        {/* Optional secondary content */}
-      </div>
+      <ul>
+        {navItems.map((item) => (
+          <li
+            key={item.name}
+            className={`nav-item ${selectedSection === item.section ? 'selected' : ''}`}
+            onClick={() => scrollToSection(item.section)}
+          >
+            {item.name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

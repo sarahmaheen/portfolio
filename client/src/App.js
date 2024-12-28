@@ -99,22 +99,41 @@
 
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+// import React, { useState } from 'react';
+// import './App.css';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// import Hero from './components/Hero';
+
+// function App() {
+//   const [selectedSection, setSelectedSection] = useState('Home'); // Default selected section
+
+//   console.log(selectedSection);
+//   return (
+//     <Router>
+//       <div className="App">
+//         <Hero setSelectedSection={setSelectedSection} selectedSection={selectedSection} /> {/* Pass function and selected section */}
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+
 
 import React, { useState } from 'react';
-import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Hero from './components/Hero';
 
 function App() {
-  const [selectedSection, setSelectedSection] = useState('Home'); // Default selected section
+  const [selectedSection, setSelectedSection] = useState('Home');
 
-  console.log(selectedSection);
   return (
-    <Router>
-      <div className="App">
-        <Hero setSelectedSection={setSelectedSection} selectedSection={selectedSection} /> {/* Pass function and selected section */}
-      </div>
-    </Router>
+    <div className="App" style={{ overflowX: 'hidden' }}>
+      <Hero setSelectedSection={setSelectedSection} selectedSection={selectedSection} />
+    </div>
   );
 }
 
